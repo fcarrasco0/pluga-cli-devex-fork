@@ -10,18 +10,17 @@ const event = {
   auth: {
     access_token: process.env.ACCESS_TOKEN,
   },
-  input: {},
 };
 
-describe('Helper method: Baz', function () {
-  it('test your helper handle here', function (done) {
-    /**
-     * Test with local example `event`
-     *
-     * helper.handle(plg, event).then((result) => {
-     *  expect(result).to.be.an('array');
-     *  done();
-     * }).catch(done);
-     */
+describe('Helper Method: Entity List', function () {
+  it('should return an array of entities', function (done) {
+    helper.handle(plg, event).then((entities) => {
+      expect(entities).to.be.an('array');
+      entities.forEach((entity) => {
+        expect(entity).to.contains.keys('label', 'value');
+      });
+
+      done();
+    }).catch(done);
   });
 });

@@ -13,6 +13,8 @@
  * @returns {Promise} Promise object represents the action result.
  */
 
+const { metaConfig } = require('./meta');
+
 exports.handle = (plg, event) => {
   /**
    * Use `plg.axios` for HTTP requests
@@ -32,26 +34,4 @@ exports.handle = (plg, event) => {
    */
 };
 
-exports.meta = {
-  name: 'Foo',
-  description: 'Foo description',
-  action_fields: {
-    fields: [
-      {
-        key: 'a',
-        name: {
-          pt_BR: 'A',
-          en: 'A',
-        },
-        description: {
-          pt_BR: '"A" field description',
-          en: '"A" field description',
-        },
-        required: true,
-        advanced: false,
-        field_type: 'custom',
-        data_type: 'string',
-      },
-    ],
-  },
-};
+exports.meta = metaConfig;

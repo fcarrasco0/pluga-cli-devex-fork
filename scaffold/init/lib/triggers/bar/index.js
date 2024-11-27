@@ -14,6 +14,8 @@
  * @returns {Promise} Promise object represents an array of resources to handle.
  */
 
+const { metaConfig } = require('./meta');
+
 exports.handle = (plg, event) => {
   /**
    * Use plg.axios for HTTP requests
@@ -30,19 +32,4 @@ exports.handle = (plg, event) => {
    */
 };
 
-exports.meta = {
-  name: 'Bar',
-  description: 'Bar description',
-  trigger_fields: {
-    type: 'local',
-    fields: [
-      {
-        key: 'b',
-        name: 'B',
-        field_type: 'string',
-      },
-    ],
-  },
-  idempotent: ['id'],
-  trigger_type: 'polling',
-};
+exports.meta = metaConfig;

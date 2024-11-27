@@ -19,6 +19,15 @@
     "no-console": "off",
     "no-param-reassign": "off",
     "no-restricted-syntax": "off",
-    "prefer-arrow-callback": "off"
-  }
+    "prefer-arrow-callback": "off",
+    "max-lines": ["error", { "max": 150 }]
+  },
+  "overrides": [
+    {
+      "files": ["**/meta.js", "*_test.js", "*app.json"],
+      "rules": {
+        "max-lines": ["off"]
+      }
+    }
+  ]
 }

@@ -31,5 +31,5 @@ exports.handle = (plg, event) => {
 };
 
 exports.meta = {
-  name: 'Baz',
+  name: { pt_BR: 'Baz', en: 'Baz' },
 };
