@@ -1,9 +1,9 @@
 {
   "engines": {
-    "node": ">= 18"
+    "node": ">= 20"
   },
   "dependencies": {
-    "pluga-plg": "0.1.5"
+    "pluga-plg": ">= 0.1.8"
   },
   "devDependencies": {
     "chai": "5.0.0",
